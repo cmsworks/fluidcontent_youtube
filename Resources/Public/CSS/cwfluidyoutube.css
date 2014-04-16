@@ -1,0 +1,24 @@
+.cwfluidyoutube-FlexEmbed {
+	position: relative;
+	overflow: hidden;
+	display: block;
+}
+
+.cwfluidyoutube-FlexEmbed:before {
+	content: "";
+	display: block;
+	width: 100%;
+}
+
+.cwfluidyoutube-FlexEmbed--16by9:before {
+	padding-bottom: 56.25%;
+}
+
+.cwfluidyoutube-FlexEmbed-item {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+}

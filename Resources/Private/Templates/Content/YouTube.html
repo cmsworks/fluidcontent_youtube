@@ -17,9 +17,13 @@
 	<f:comment>
 		Here we get the YouTube video ID from the URL, using a regex found here:
 		http://stackoverflow.com/a/6121972/796152
-		This should be improved and moved to a custom ViewHelper etc.
+		This should be improved and moved to the controller etc.
 	</f:comment>
 	<v:var.set name="videoId"><v:iterator.first haystack="{v:format.regularExpression(pattern: '#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#', replacement: 0, return: 1, subject: url)}"/></v:var.set>
 
-	<iframe width="{settings.width}" height="{settings.height}" src="//www.youtube-nocookie.com/embed/{videoId}?rel=0" frameborder="0" allowfullscreen></iframe>
+	<div class="cwfluidyoutube-FlexEmbed cwfluidyoutube-FlexEmbed--16by9">
+		<iframe class="cwfluidyoutube-FlexEmbed-item" width="{settings.width}" height="{settings.height}" src="//www.youtube-nocookie.com/embed/{videoId}?rel=0" frameborder="0" allowfullscreen></iframe>
+	</div>
+
+	<v:asset.style path="{f:uri.resource(path: 'CSS/cwfluidyoutube.css')}" group="cwfluidyoutube" name="style" />
 </f:section>
