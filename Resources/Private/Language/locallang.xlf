@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages"
+		  date="2014-04-16T14:13:17Z" product-name="cwfluidyoutube">
+		<header/>
+		<body>
+			<trans-unit id="flux.youtube.fields.url">
+				<source>YouTube URL</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

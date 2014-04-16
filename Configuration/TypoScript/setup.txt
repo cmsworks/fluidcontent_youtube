@@ -1,0 +1,11 @@
+plugin.tx_cwfluidyoutube {
+	view {
+		templateRootPath = {$plugin.tx_cwfluidyoutube.view.templateRootPath}
+		partialRootPath = {$plugin.tx_cwfluidyoutube.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_cwfluidyoutube.view.layoutRootPath}
+	}
+	settings {
+		width = {$plugin.tx_cwfluidyoutube.settings.width}
+		height = {$plugin.tx_cwfluidyoutube.settings.height}
+	}
+}

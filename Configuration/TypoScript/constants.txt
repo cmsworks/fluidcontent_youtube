@@ -1,0 +1,11 @@
+plugin.tx_cwfluidyoutube {
+	view {
+		templateRootPath = EXT:cwfluidyoutube/Resources/Private/Templates/
+		partialRootPath = EXT:cwfluidyoutube/Resources/Private/Partials/
+		layoutRootPath = EXT:cwfluidyoutube/Resources/Private/Layouts/
+	}
+	settings {
+		width = 480
+		height = 270
+	}
+}
