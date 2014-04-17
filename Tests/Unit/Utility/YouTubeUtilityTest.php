@@ -1,5 +1,5 @@
 <?php
-namespace CmsWorks\Cwfluidyoutube\Utility;
+namespace CmsWorks\Cwfluidyoutube\Tests\Unit\Utility;
 /***************************************************************
  *  Copyright notice
  *
@@ -24,27 +24,46 @@ namespace CmsWorks\Cwfluidyoutube\Utility;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
-class YouTubeUtility {
+class YouTubeUtilityTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 
 	/**
-	 * Returns the 11 characters long YouTube video identifier from a given
-	 * YouTube URL.
-	 *
-	 * The used regex is taken from: http://stackoverflow.com/a/6121972/796152
-	 *
-	 * @param  string $url YouTube URL
-	 * @return string      YouTube Video ID
+	 * YouTubeUtility
+	 * @var \CmsWorks\Cwfluidyoutube\Utility\YouTubeUtility
 	 */
-	public function getVideoId($url) {
-		$videoId = '';
+	protected $subject;
 
-		$pattern = '#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#';
+	public function setUp() {
+		$this->subject = new \CmsWorks\Cwfluidyoutube\Utility\YouTubeUtility();
+	}
 
-		if (preg_match($pattern, $url, $matches)) {
-			$videoId = $matches[0];
+	/**
+	 * @test
+	 * @return void
+	 */
+	public function getVideoIdReturnsEmptyStringForEmptyUrl() {
+		$result = $this->subject->getVideoId('');
+		$this->assertEquals('', $result);
+	}
+
+	/**
+	 * @test
+	 * @return void
+	 */
+	public function getVideoIdReturnsIdForGivenUrl() {
+		$urls = array(
+			"youtube.com/v/dQw4w9WgXcQ",
+			"youtube.com/vi/dQw4w9WgXcQ",
+			"youtube.com/?v=dQw4w9WgXcQ",
+			"youtube.com/?vi=dQw4w9WgXcQ",
+			"youtube.com/watch?v=dQw4w9WgXcQ",
+			"youtube.com/watch?vi=dQw4w9WgXcQ",
+			"youtu.be/dQw4w9WgXcQ",
+		);
+
+		foreach ($urls as $url) {
+			$result = $this->subject->getVideoId($url);
+			$this->assertEquals('dQw4w9WgXcQ', $result);
 		}
-
-		return $videoId;
 	}
 
 }
