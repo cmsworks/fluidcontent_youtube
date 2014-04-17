@@ -3,7 +3,6 @@ if (!defined('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Provider extension for content');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Provider extension for content');
 
-Tx_Flux_Core::registerProviderExtensionKey('cwfluidyoutube', 'Content');
-
+\FluidTYPO3\Flux\Core::registerProviderExtensionKey('CmsWorks.Cwfluidyoutube', 'Content');
