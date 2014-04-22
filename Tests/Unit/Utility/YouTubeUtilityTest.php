@@ -49,20 +49,48 @@ class YouTubeUtilityTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	 * @test
 	 * @return void
 	 */
-	public function getVideoIdReturnsIdForGivenUrl() {
+	public function getVideoIdSupportsPath() {
 		$urls = array(
 			"youtube.com/v/dQw4w9WgXcQ",
 			"youtube.com/vi/dQw4w9WgXcQ",
+			"youtube.com/embed/dQw4w9WgXcQ",
+			"youtube.com/e/dQw4w9WgXcQ",
+			"youtu.be/dQw4w9WgXcQ",
+		);
+
+		foreach ($urls as $url) {
+			$result = $this->subject->getVideoId($url);
+			$this->assertEquals('dQw4w9WgXcQ', $result);
+		}
+	}
+
+	/**
+	 * @test
+	 * @return void
+	 */
+	public function getVideoIdSupportsQueryString() {
+		$urls = array(
 			"youtube.com/?v=dQw4w9WgXcQ",
 			"youtube.com/?vi=dQw4w9WgXcQ",
 			"youtube.com/watch?v=dQw4w9WgXcQ",
 			"youtube.com/watch?vi=dQw4w9WgXcQ",
-			"youtube.com/embed/dQw4w9WgXcQ",
-			"youtube.com/e/dQw4w9WgXcQ",
-			"youtube.com/user/username#p/u/11/dQw4w9WgXcQ",
 			"youtube.com/watch?feature=player_embedded&v=dQw4w9WgXcQ",
 			"youtube.com/?feature=player_embedded&v=dQw4w9WgXcQ",
-			"youtu.be/dQw4w9WgXcQ",
+		);
+
+		foreach ($urls as $url) {
+			$result = $this->subject->getVideoId($url);
+			$this->assertEquals('dQw4w9WgXcQ', $result);
+		}
+	}
+
+	/**
+	 * @test
+	 * @return void
+	 */
+	public function getVideoIdSupportsFragment() {
+		$urls = array(
+			"youtube.com/user/username#p/u/11/dQw4w9WgXcQ",
 		);
 
 		foreach ($urls as $url) {
