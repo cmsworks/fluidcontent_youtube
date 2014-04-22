@@ -45,17 +45,9 @@ class YouTubeUtility {
 
 		$parsedUrl = parse_url($url);
 
-		$videoId = $this->getVideoIdFromQueryString($parsedUrl["query"]);
-
-		if (!$videoId) {
-			$videoId = $this->getVideoIdFromFragment($parsedUrl["fragment"]);
-		}
-
-		if (!$videoId) {
-			$videoId = $this->getVideoIdFromPath($parsedUrl["path"]);
-		}
-
-		return $videoId;
+		return $this->getVideoIdFromQueryString($parsedUrl["query"])
+			?: $this->getVideoIdFromFragment($parsedUrl["fragment"])
+			?: $this->getVideoIdFromPath($parsedUrl["path"]);
 	}
 
 	/**
