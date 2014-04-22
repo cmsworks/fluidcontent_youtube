@@ -57,6 +57,11 @@ class YouTubeUtilityTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 			"youtube.com/?vi=dQw4w9WgXcQ",
 			"youtube.com/watch?v=dQw4w9WgXcQ",
 			"youtube.com/watch?vi=dQw4w9WgXcQ",
+			"youtube.com/embed/dQw4w9WgXcQ",
+			"youtube.com/e/dQw4w9WgXcQ",
+			"youtube.com/user/username#p/u/11/dQw4w9WgXcQ",
+			"youtube.com/watch?feature=player_embedded&v=dQw4w9WgXcQ",
+			"youtube.com/?feature=player_embedded&v=dQw4w9WgXcQ",
 			"youtu.be/dQw4w9WgXcQ",
 		);
 
