@@ -1,3 +1,10 @@
+/**
+ * FlexEmbed component
+ *
+ * Makes an embed responsive, based on its intrinsic ratio.
+ *
+ * Based on SUIT FlexEmbed: https://github.com/suitcss/components-flex-embed/
+ */
 .fluidcontentyoutube-FlexEmbed {
 	position: relative;
 	overflow: hidden;
