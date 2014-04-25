@@ -11,8 +11,8 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'Provider extension for content ',
-	'description' => 'Provider extension for content ',
+	'title' => 'Fluid Content YouTube Embed Element',
+	'description' => 'A YouTube Fluid Content Element for use with EXT:fluidcontent',
 	'category' => 'misc',
 	'shy' => 0,
 	'version' => '0.0.1',
