@@ -1,11 +1,11 @@
-plugin.tx_cwfluidyoutube {
+plugin.tx_fluidcontentyoutube {
 	view {
-		templateRootPath = {$plugin.tx_cwfluidyoutube.view.templateRootPath}
-		partialRootPath = {$plugin.tx_cwfluidyoutube.view.partialRootPath}
-		layoutRootPath = {$plugin.tx_cwfluidyoutube.view.layoutRootPath}
+		templateRootPath = {$plugin.tx_fluidcontentyoutube.view.templateRootPath}
+		partialRootPath = {$plugin.tx_fluidcontentyoutube.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_fluidcontentyoutube.view.layoutRootPath}
 	}
 	settings {
-		width = {$plugin.tx_cwfluidyoutube.settings.width}
-		height = {$plugin.tx_cwfluidyoutube.settings.height}
+		width = {$plugin.tx_fluidcontentyoutube.settings.width}
+		height = {$plugin.tx_fluidcontentyoutube.settings.height}
 	}
 }

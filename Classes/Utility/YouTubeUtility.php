@@ -1,5 +1,5 @@
 <?php
-namespace CmsWorks\Cwfluidyoutube\Utility;
+namespace CmsWorks\FluidcontentYoutube\Utility;
 /***************************************************************
  *  Copyright notice
  *

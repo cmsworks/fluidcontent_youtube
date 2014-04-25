@@ -1,5 +1,5 @@
 <?php
-namespace CmsWorks\Cwfluidyoutube\Tests\Unit\Utility;
+namespace CmsWorks\FluidcontentYoutube\Tests\Unit\Utility;
 /***************************************************************
  *  Copyright notice
  *
@@ -28,12 +28,12 @@ class YouTubeUtilityTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 
 	/**
 	 * YouTubeUtility
-	 * @var \CmsWorks\Cwfluidyoutube\Utility\YouTubeUtility
+	 * @var \CmsWorks\FluidcontentYoutube\Utility\YouTubeUtility
 	 */
 	protected $subject;
 
 	public function setUp() {
-		$this->subject = new \CmsWorks\Cwfluidyoutube\Utility\YouTubeUtility();
+		$this->subject = new \CmsWorks\FluidcontentYoutube\Utility\YouTubeUtility();
 	}
 
 	/**

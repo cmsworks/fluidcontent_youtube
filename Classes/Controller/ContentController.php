@@ -1,5 +1,5 @@
 <?php
-namespace CmsWorks\Cwfluidyoutube\Controller;
+namespace CmsWorks\FluidcontentYoutube\Controller;
 /***************************************************************
  *  Copyright notice
  *
@@ -31,7 +31,7 @@ use FluidTYPO3\Fluidcontent\Controller\AbstractContentController;
  *
  * Controller to render the content element.
  *
- * @package CwFluidYouTube
+ * @package FluidcontentYoutube
  * @subpackage Controller
  */
 class ContentController extends AbstractContentController {
@@ -39,7 +39,7 @@ class ContentController extends AbstractContentController {
 	/**
 	 * YouTubeUtility
 	 *
-	 * @var \CmsWorks\Cwfluidyoutube\Utility\YouTubeUtility
+	 * @var \CmsWorks\FluidcontentYoutube\Utility\YouTubeUtility
 	 * @inject
 	 */
 	protected $youTubeUtility;

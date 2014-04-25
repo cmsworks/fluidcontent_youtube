@@ -1,8 +1,8 @@
-plugin.tx_cwfluidyoutube {
+plugin.tx_fluidcontentyoutube {
 	view {
-		templateRootPath = EXT:cwfluidyoutube/Resources/Private/Templates/
-		partialRootPath = EXT:cwfluidyoutube/Resources/Private/Partials/
-		layoutRootPath = EXT:cwfluidyoutube/Resources/Private/Layouts/
+		templateRootPath = EXT:fluidcontent_youtube/Resources/Private/Templates/
+		partialRootPath = EXT:fluidcontent_youtube/Resources/Private/Partials/
+		layoutRootPath = EXT:fluidcontent_youtube/Resources/Private/Layouts/
 	}
 	settings {
 		width = 480

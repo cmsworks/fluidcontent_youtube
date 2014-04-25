@@ -5,4 +5,4 @@ if (!defined('TYPO3_MODE')) {
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Provider extension for content');
 
-\FluidTYPO3\Flux\Core::registerProviderExtensionKey('CmsWorks.Cwfluidyoutube', 'Content');
+\FluidTYPO3\Flux\Core::registerProviderExtensionKey('CmsWorks.FluidcontentYoutube', 'Content');

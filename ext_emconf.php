@@ -1,7 +1,7 @@
 <?php
 
 /***************************************************************
- * Extension Manager/Repository config file for ext "cwfluidyoutube".
+ * Extension Manager/Repository config file for ext "fluidcontent_youtube".
  *
  * Auto generated 16-04-2014 13:51
  *
