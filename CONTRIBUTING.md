@@ -90,7 +90,7 @@ project:
    check that all tests pass after you've made changes:
 
    ```bash
-   # TODO
+   /path/to/typo3/cli_dispatch.phpsh phpunit typo3conf/ext/fluidcontent_youtube/Tests/Unit/
    ```
 
 6. Commit your changes in logical chunks. Provide clear and explanatory commit
